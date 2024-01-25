@@ -1,4 +1,4 @@
-class Tabla_asignacion:
+class TablaAsignacion:
     def __init__(self):
         self.table = {
                     'T': 0,
