@@ -30,8 +30,8 @@ class TablaAsignacion:
     def get_formatted_table(self):
         keys = list(self.get_table().keys())
         values = list(self.get_table().values())
-        values_output = ' | '.join('{:<2}'.format(str(key)) for key in keys)
-        keys_output = ' | '.join('{:<2}'.format(str(value)) for value in values)
+        values_output = ' | '.join('{:<2}'.format(str(value)) for value in values)
+        keys_output = ' | '.join('{:<2}'.format(str(key)) for key in keys)
         return values_output + '\n' + keys_output
 
     def __repr__(self):
