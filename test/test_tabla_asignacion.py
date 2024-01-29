@@ -21,3 +21,8 @@ def test_letra_no_permitida():
 @pytest.mark.letra_correcta
 def test_letra_correcta():
     tabla = TablaAsignacion()
+    assert tabla.check_number(22) == 'E'
+    assert tabla.check_number(10) == 'X'
+    assert tabla.check_number(15) == 'S'
+    assert tabla.check_number(7) == 'F'
+    assert tabla.check_number(3) == 'A'
