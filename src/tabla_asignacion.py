@@ -44,7 +44,7 @@ class TablaAsignacion:
         return letra in self.get_table()
 
     def obtener_cociente_dni(self, DNI):
-        cociente = int(DNI[0:7]) % self.get_modulo()
+        cociente = int(DNI[0:8]) % self.get_modulo()
         return self.check_number(cociente)
 
     def check_number(self, cociente):
