@@ -26,3 +26,14 @@ def test_letra_correcta():
     assert tabla.check_number(15) == 'S'
     assert tabla.check_number(7) == 'F'
     assert tabla.check_number(3) == 'A'
+    with pytest.raises(KeyError):
+        tabla.check_number(84)
+
+@pytest.mark.obtener_cociente_dni
+def test_cociente_dni():
+    tabla = TablaAsignacion()
+    assert tabla.obtener_cociente_dni("78484464T") == "T"
+    assert tabla.obtener_cociente_dni("01817200Q") == "Q"
+    assert tabla.obtener_cociente_dni("95882054E") == "E"
+    assert tabla.obtener_cociente_dni("26868974Y") == "Y"
+    assert tabla.obtener_cociente_dni("40135330P") == "P"
