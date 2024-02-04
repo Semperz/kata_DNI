@@ -7,6 +7,7 @@ class Dni:
 
     def set_dni(self, cadena):
         self.DNI = cadena
+        return self
 
     def get_dni(self):
         return self.DNI
@@ -26,6 +27,7 @@ class Dni:
     def check_letter(self):
         if self.check_dni_letter() and self.get_dni_letter().isupper():
             return True
+        return False
 
     def check_length(self):
         return len(self.get_dni()) == 9
